@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Assignment 1</title>
     <script src="angular.js"></script>
+    <script src="script.js"></script>
 </head>
-<body>
-    <input type="text" class="">
-    <button class="">Too Much?</button>
-    
+<body ng-app="foodCheck" >
+    <div ng-controller="foodCheckController">
+        <input type="text" class="" ng-model="foodList" ng-keyup="checkList();">
+        <button class="">Check if too much</button>
+        <p>{{message}}</p>
+    </div>
 </body>
 </html>
