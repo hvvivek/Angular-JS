@@ -16,14 +16,14 @@
 
         function getMessageFromList(string){
             var temp = "Please enter data first";
-            string.trim();
-            if(string === ""){
+            var splitString = string.split(',').filter(isEmpty);
+            var num = splitString.length;
+            if(num === 0){
                 $scope.status = "danger";
+                $scope.nullMessage = "Input does NOT consider and empty item, i.e., , , as an item towards to the count";
             }
             else{
                 $scope.status = "success"
-                var splitString = string.split(',').filter(isEmpty);
-                var num = splitString.length;
                 temp = num>3? "Too much!":"Enjoy!";
             }
             return temp;
