@@ -1,0 +1,11 @@
+.message {
+    font-size: 1.3em; font-weight: bold; 
+}
+
+.alert-danger{
+    border-color: #a94442;
+}
+
+.alert-success{
+    border-color: #3ca03d;
+}
